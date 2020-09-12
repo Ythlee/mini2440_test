@@ -16,6 +16,10 @@
 #define GPIOD_BASE	((volatile unsigned int *)0x56000020)
 #define GPIOD		((GPIOD_TypeDef *)GPIOD_BASE)
 
+#define GPIOH_BASE	((volatile unsigned int *)0x56000070)
+#define GPIOH		((GPIOH_TypeDef *)GPIOH_BASE)
+
+
 /* UART 基地址*/
 #define UART_BASE	((volatile unsigned int *)0x50000000)
 #define UART		((UART_TypeDef *)UART_BASE)
@@ -44,6 +48,11 @@ typedef struct{
     __IO unsigned int   GPDUP;                   //Pull-up control B
 }GPIOD_TypeDef;
 
+typedef struct{
+    __IO unsigned int   GPHCON;                   //Port B control
+    __IO unsigned int   GPHDAT;                   //Port B data
+    __IO unsigned int   GPHUP;                   //Pull-up control B
+}GPIOH_TypeDef;
 
 
 typedef struct {
@@ -58,26 +67,6 @@ typedef struct {
     __IO unsigned int UTXH0;            //UART 0 transmission hold
     __IO unsigned int URXH0;            //UART 0 receive buffer
     __IO unsigned int UBRDIV0;          //UART 0 baud rate divisor
-    __IO unsigned int ULCON1;           //UART 1 line control
-    __IO unsigned int UCON1;            //UART 1 control
-    __IO unsigned int UFCON1;           //UART 1 FIFO control
-    __IO unsigned int UMCON1;           //UART 1 modem control
-    __IO unsigned int UTRSTAT1;         //UART 1 Tx/Rx status
-    __IO unsigned int UERSTAT1;         //UART 1 Rx error status
-    __IO unsigned int UFSTAT1;          //UART 1 FIFO status
-    __IO unsigned int UMSTAT1;          //UART 1 modem status
-    __IO unsigned int UTXH1;            //UART 1 transmission hold
-    __IO unsigned int URXH1;            //UART 1 receive buffer
-    __IO unsigned int UBRDIV1;          //UART 1 baud rate divisor
-    __IO unsigned int ULCON2;           //UART 2 line control
-    __IO unsigned int UCON2;            //UART 2 control
-    __IO unsigned int UFCON2;           //UART 2 FIFO control
-    __IO unsigned int UTRSTAT2;         //UART 2 Tx/Rx status
-    __IO unsigned int UERSTAT2;         //UART 2 Rx error status
-    __IO unsigned int UFSTAT2;          //UART 2 FIFO status
-    __IO unsigned int UTXH2;            //UART 2 transmission hold
-    __IO unsigned int URXH2 ;           //UART 2 receive buffer
-    __IO unsigned int UBRDIV2;          //UART 2 baud rate divisor
 } UART_TypeDef;
 
 

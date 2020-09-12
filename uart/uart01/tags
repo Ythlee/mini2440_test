@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+GPACON	mini2440.h	/^    __IO unsigned int   GPACON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720108	typeref:typename:__IO unsigned int
+GPADAT	mini2440.h	/^    __IO unsigned int   GPADAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720108	typeref:typename:__IO unsigned int
+GPBCON	mini2440.h	/^    __IO unsigned int   GPBCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720208	typeref:typename:__IO unsigned int
+GPBDAT	mini2440.h	/^    __IO unsigned int   GPBDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720208	typeref:typename:__IO unsigned int
+GPBUP	mini2440.h	/^    __IO unsigned int   GPBUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720208	typeref:typename:__IO unsigned int
+GPCCON	mini2440.h	/^    __IO unsigned int   GPCCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720308	typeref:typename:__IO unsigned int
+GPCDAT	mini2440.h	/^    __IO unsigned int   GPCDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720308	typeref:typename:__IO unsigned int
+GPCUP	mini2440.h	/^    __IO unsigned int   GPCUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720308	typeref:typename:__IO unsigned int
+GPDAT	mini2440.h	/^    __IO unsigned int   GPDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720408	typeref:typename:__IO unsigned int
+GPDCON	mini2440.h	/^    __IO unsigned int   GPDCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720408	typeref:typename:__IO unsigned int
+GPDUP	mini2440.h	/^    __IO unsigned int   GPDUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720408	typeref:typename:__IO unsigned int
+GPHCON	mini2440.h	/^    __IO unsigned int   GPHCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720508	typeref:typename:__IO unsigned int
+GPHDAT	mini2440.h	/^    __IO unsigned int   GPHDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720508	typeref:typename:__IO unsigned int
+GPHUP	mini2440.h	/^    __IO unsigned int   GPHUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720508	typeref:typename:__IO unsigned int
+GPIOA	mini2440.h	/^#define GPIOA	/;"	d
+GPIOA_BASE	mini2440.h	/^#define GPIOA_BASE	/;"	d
+GPIOA_TypeDef	mini2440.h	/^}GPIOA_TypeDef;$/;"	t	typeref:struct:__anon4490a7720108
+GPIOB	mini2440.h	/^#define GPIOB	/;"	d
+GPIOB_BASE	mini2440.h	/^#define GPIOB_BASE	/;"	d
+GPIOB_TypeDef	mini2440.h	/^}GPIOB_TypeDef;$/;"	t	typeref:struct:__anon4490a7720208
+GPIOC	mini2440.h	/^#define GPIOC	/;"	d
+GPIOC_BASE	mini2440.h	/^#define GPIOC_BASE	/;"	d
+GPIOC_TypeDef	mini2440.h	/^}GPIOC_TypeDef;$/;"	t	typeref:struct:__anon4490a7720308
+GPIOD	mini2440.h	/^#define GPIOD	/;"	d
+GPIOD_BASE	mini2440.h	/^#define GPIOD_BASE	/;"	d
+GPIOD_TypeDef	mini2440.h	/^}GPIOD_TypeDef;$/;"	t	typeref:struct:__anon4490a7720408
+GPIOH	mini2440.h	/^#define GPIOH	/;"	d
+GPIOH_BASE	mini2440.h	/^#define GPIOH_BASE	/;"	d
+GPIOH_TypeDef	mini2440.h	/^}GPIOH_TypeDef;$/;"	t	typeref:struct:__anon4490a7720508
+UART	mini2440.h	/^#define UART	/;"	d
+UART_BASE	mini2440.h	/^#define UART_BASE	/;"	d
+UART_CLOCK	uart.h	/^#define UART_CLOCK /;"	d
+UART_TypeDef	mini2440.h	/^} UART_TypeDef;$/;"	t	typeref:struct:__anon4490a7720608
+UBRDIV0	mini2440.h	/^    __IO unsigned int UBRDIV0;          \/\/UART 0 baud rate divisor$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UBRDIV1	mini2440.h	/^    __IO unsigned int UBRDIV1;          \/\/UART 1 baud rate divisor$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UBRDIV2	mini2440.h	/^    __IO unsigned int UBRDIV2;          \/\/UART 2 baud rate divisor$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UCON0	mini2440.h	/^    __IO unsigned int UCON0;            \/\/UART 0 control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UCON1	mini2440.h	/^    __IO unsigned int UCON1;            \/\/UART 1 control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UCON2	mini2440.h	/^    __IO unsigned int UCON2;            \/\/UART 2 control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UERSTAT0	mini2440.h	/^    __IO unsigned int UERSTAT0;         \/\/UART 0 Rx error status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UERSTAT1	mini2440.h	/^    __IO unsigned int UERSTAT1;         \/\/UART 1 Rx error status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UERSTAT2	mini2440.h	/^    __IO unsigned int UERSTAT2;         \/\/UART 2 Rx error status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFCON0	mini2440.h	/^    __IO unsigned int UFCON0;           \/\/UART 0 FIFO control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFCON1	mini2440.h	/^    __IO unsigned int UFCON1;           \/\/UART 1 FIFO control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFCON2	mini2440.h	/^    __IO unsigned int UFCON2;           \/\/UART 2 FIFO control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFSTAT0	mini2440.h	/^    __IO unsigned int UFSTAT0;          \/\/UART 0 FIFO status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFSTAT1	mini2440.h	/^    __IO unsigned int UFSTAT1;          \/\/UART 1 FIFO status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFSTAT2	mini2440.h	/^    __IO unsigned int UFSTAT2;          \/\/UART 2 FIFO status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+ULCON0	mini2440.h	/^    __IO unsigned int ULCON0;           \/\/UART 0 line control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+ULCON1	mini2440.h	/^    __IO unsigned int ULCON1;           \/\/UART 1 line control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+ULCON2	mini2440.h	/^    __IO unsigned int ULCON2;           \/\/UART 2 line control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UMCON0	mini2440.h	/^    __IO unsigned int UMCON0;           \/\/UART 0 modem control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UMCON1	mini2440.h	/^    __IO unsigned int UMCON1;           \/\/UART 1 modem control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UMSTAT0	mini2440.h	/^    __IO unsigned int UMSTAT0;          \/\/UART 0 modem status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UMSTAT1	mini2440.h	/^    __IO unsigned int UMSTAT1;          \/\/UART 1 modem status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+URXH0	mini2440.h	/^    __IO unsigned int URXH0;            \/\/UART 0 receive buffer$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+URXH1	mini2440.h	/^    __IO unsigned int URXH1;            \/\/UART 1 receive buffer$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+URXH2	mini2440.h	/^    __IO unsigned int URXH2 ;           \/\/UART 2 receive buffer$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTRSTAT0	mini2440.h	/^    __IO unsigned int UTRSTAT0;         \/\/UART 0 Tx\/Rx status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTRSTAT1	mini2440.h	/^    __IO unsigned int UTRSTAT1;         \/\/UART 1 Tx\/Rx status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTRSTAT2	mini2440.h	/^    __IO unsigned int UTRSTAT2;         \/\/UART 2 Tx\/Rx status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTXH0	mini2440.h	/^    __IO unsigned int UTXH0;            \/\/UART 0 transmission hold$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTXH1	mini2440.h	/^    __IO unsigned int UTXH1;            \/\/UART 1 transmission hold$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTXH2	mini2440.h	/^    __IO unsigned int UTXH2;            \/\/UART 2 transmission hold$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+_LED_H_	led.h	/^#define _LED_H_$/;"	d
+_MINI2440_H	mini2440.h	/^#define _MINI2440_H$/;"	d
+_UART_H_	uart.h	/^#define _UART_H_$/;"	d
+__IO	mini2440.h	/^#define __IO	/;"	d
+__anon4490a7720108	mini2440.h	/^typedef struct{$/;"	s
+__anon4490a7720208	mini2440.h	/^typedef struct{$/;"	s
+__anon4490a7720308	mini2440.h	/^typedef struct{$/;"	s
+__anon4490a7720408	mini2440.h	/^typedef struct{$/;"	s
+__anon4490a7720508	mini2440.h	/^typedef struct{$/;"	s
+__anon4490a7720608	mini2440.h	/^typedef struct {$/;"	s
+_start	start.S	/^_start:$/;"	l
+boot_init	start.S	/^boot_init:$/;"	l
+bord_init_ok	led.c	/^void bord_init_ok(void)$/;"	f	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
+clock_init	start.S	/^clock_init:$/;"	l
+delay	led.c	/^void delay(unsigned int time)$/;"	f	typeref:typename:void
+disable_watch_dog	start.S	/^disable_watch_dog:$/;"	l
+getc	uart.c	/^static unsigned int getc(void)$/;"	f	typeref:typename:unsigned int	file:
+led_init	led.c	/^void led_init(void)$/;"	f	typeref:typename:void
+led_twinkle	led.c	/^void led_twinkle(void)$/;"	f	typeref:typename:void
+loop	start.S	/^loop:$/;"	l
+main	main.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+putc	uart.c	/^static void putc(unsigned char data)$/;"	f	typeref:typename:void	file:
+puts	uart.c	/^static void puts(const char *s)$/;"	f	typeref:typename:void	file:
+start.bin	Makefile	/^start.bin:start.S$/;"	t
+uart_init	uart.c	/^void uart_init(int buad)$/;"	f	typeref:typename:void
+uart_test	uart.c	/^void uart_test(void)$/;"	f	typeref:typename:void

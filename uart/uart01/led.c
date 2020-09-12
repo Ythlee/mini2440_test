@@ -16,9 +16,9 @@ void led_init(void)
 void led_twinkle(void)
 {
     GPIOB->GPBDAT &= ~(0xF << 5);
-    delay(0xFE0);
+    delay(0xEE000);
     GPIOB->GPBDAT |= (0xF << 5);
-    delay(0xFE0);
+    delay(0xEE000);
 }
 
 void bord_init_ok(void)
