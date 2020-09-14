@@ -31,11 +31,7 @@ void uart_init(void)
     //UART->UBRDIV0 = (int)UART_CLOCK / (buad * 16) - 1;
     UART->UBRDIV0 = UART_BAND;
     //UART->UBRDIV0 = 26;
-<<<<<<< HEAD
     shell_cmd_prompt();
-=======
-	shell_cmd_prompt();
->>>>>>> 7b0af863187ba2ac204f12938fc2fbab88bdb6d1
 
 }
 
@@ -45,15 +41,9 @@ void EINT_Handle(void)
 
     if(INT->SUBSRCPND & (1 << 0)) {
         //buf = UART->URXH0;
-<<<<<<< HEAD
         //shell_cmd_prompt();
         getstr();
         shell_cmd_prompt();
-=======
-		//shell_cmd_prompt();
-		getstr();
-		shell_cmd_prompt();
->>>>>>> 7b0af863187ba2ac204f12938fc2fbab88bdb6d1
         INT->SUBSRCPND |= 1 << 0;
         INT->SRCPND |= 1 << 28;
         INT->INTPND |= 1 << 28;
