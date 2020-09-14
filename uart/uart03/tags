@@ -1,0 +1,121 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+CMD	serial.h	/^    CMD,$/;"	e	enum:__anon0d8f0a5b0103
+COMMERDER	serial.h	/^} COMMERDER;$/;"	t	typeref:enum:__anon0d8f0a5b0103
+EINT_Handle	uart.c	/^void EINT_Handle(void)$/;"	f	typeref:typename:void
+ENTER	serial.h	/^    ENTER,$/;"	e	enum:__anon0d8f0a5b0103
+GPACON	mini2440.h	/^    __IO unsigned int   GPACON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720108	typeref:typename:__IO unsigned int
+GPADAT	mini2440.h	/^    __IO unsigned int   GPADAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720108	typeref:typename:__IO unsigned int
+GPBCON	mini2440.h	/^    __IO unsigned int   GPBCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720208	typeref:typename:__IO unsigned int
+GPBDAT	mini2440.h	/^    __IO unsigned int   GPBDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720208	typeref:typename:__IO unsigned int
+GPBUP	mini2440.h	/^    __IO unsigned int   GPBUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720208	typeref:typename:__IO unsigned int
+GPCCON	mini2440.h	/^    __IO unsigned int   GPCCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720308	typeref:typename:__IO unsigned int
+GPCDAT	mini2440.h	/^    __IO unsigned int   GPCDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720308	typeref:typename:__IO unsigned int
+GPCUP	mini2440.h	/^    __IO unsigned int   GPCUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720308	typeref:typename:__IO unsigned int
+GPDAT	mini2440.h	/^    __IO unsigned int   GPDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720408	typeref:typename:__IO unsigned int
+GPDCON	mini2440.h	/^    __IO unsigned int   GPDCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720408	typeref:typename:__IO unsigned int
+GPDUP	mini2440.h	/^    __IO unsigned int   GPDUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720408	typeref:typename:__IO unsigned int
+GPHCON	mini2440.h	/^    __IO unsigned int   GPHCON;                   \/\/Port B control$/;"	m	struct:__anon4490a7720508	typeref:typename:__IO unsigned int
+GPHDAT	mini2440.h	/^    __IO unsigned int   GPHDAT;                   \/\/Port B data$/;"	m	struct:__anon4490a7720508	typeref:typename:__IO unsigned int
+GPHUP	mini2440.h	/^    __IO unsigned int   GPHUP;                   \/\/Pull-up control B$/;"	m	struct:__anon4490a7720508	typeref:typename:__IO unsigned int
+GPIOA	mini2440.h	/^#define GPIOA	/;"	d
+GPIOA_BASE	mini2440.h	/^#define GPIOA_BASE	/;"	d
+GPIOA_TypeDef	mini2440.h	/^} GPIOA_TypeDef;$/;"	t	typeref:struct:__anon4490a7720108
+GPIOB	mini2440.h	/^#define GPIOB	/;"	d
+GPIOB_BASE	mini2440.h	/^#define GPIOB_BASE	/;"	d
+GPIOB_TypeDef	mini2440.h	/^} GPIOB_TypeDef;$/;"	t	typeref:struct:__anon4490a7720208
+GPIOC	mini2440.h	/^#define GPIOC	/;"	d
+GPIOC_BASE	mini2440.h	/^#define GPIOC_BASE	/;"	d
+GPIOC_TypeDef	mini2440.h	/^} GPIOC_TypeDef;$/;"	t	typeref:struct:__anon4490a7720308
+GPIOD	mini2440.h	/^#define GPIOD	/;"	d
+GPIOD_BASE	mini2440.h	/^#define GPIOD_BASE	/;"	d
+GPIOD_TypeDef	mini2440.h	/^} GPIOD_TypeDef;$/;"	t	typeref:struct:__anon4490a7720408
+GPIOH	mini2440.h	/^#define GPIOH	/;"	d
+GPIOH_BASE	mini2440.h	/^#define GPIOH_BASE	/;"	d
+GPIOH_TypeDef	mini2440.h	/^} GPIOH_TypeDef;$/;"	t	typeref:struct:__anon4490a7720508
+HandleDataAbort	start.S	/^HandleDataAbort:$/;"	l
+HandleFIQ	start.S	/^HandleFIQ:$/;"	l
+HandleIRQ	start.S	/^HandleIRQ:$/;"	l
+HandleNotUsed	start.S	/^HandleNotUsed:$/;"	l
+HandlePrefetchAbort	start.S	/^HandlePrefetchAbort:$/;"	l
+HandleSWI	start.S	/^HandleSWI:$/;"	l
+HandleUndef	start.S	/^HandleUndef:$/;"	l
+INT	mini2440.h	/^#define INT	/;"	d
+INTMOD	mini2440.h	/^    __IO unsigned int 	INTMOD;        \/\/Interrupt mode control$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+INTMSK	mini2440.h	/^    __IO unsigned int 	INTMSK;        \/\/Interrupt mask control$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+INTOFFSET	mini2440.h	/^    __IO unsigned int 	INTOFFSET;     \/\/Interrupt request source offset$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+INTPND	mini2440.h	/^    __IO unsigned int 	INTPND;        \/\/Interrupt request status$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+INTSUBMSK	mini2440.h	/^    __IO unsigned int 	INTSUBMSK;     \/\/Interrupt sub mask$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+INT_BASE	mini2440.h	/^#define INT_BASE	/;"	d
+INT_TypeDef	mini2440.h	/^} INT_TypeDef;$/;"	t	typeref:struct:__anon4490a7720708
+LED_ALLOFF	led.h	/^#define LED_ALLOFF /;"	d
+LED_ALLON	led.h	/^#define LED_ALLON /;"	d
+LED_OFF	serial.h	/^    LED_OFF,$/;"	e	enum:__anon0d8f0a5b0103
+LED_ON	serial.h	/^    LED_ON,$/;"	e	enum:__anon0d8f0a5b0103
+LS	serial.h	/^    LS,$/;"	e	enum:__anon0d8f0a5b0103
+PRI	serial.h	/^    PRI,$/;"	e	enum:__anon0d8f0a5b0103
+PRIORITY	mini2440.h	/^    __IO unsigned int 	PRIORITY;      \/\/IRQ priority control$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+PWD	serial.h	/^    PWD,$/;"	e	enum:__anon0d8f0a5b0103
+Reset	start.S	/^Reset:$/;"	l
+SRCPND	mini2440.h	/^    __IO unsigned int 	SRCPND;        \/\/Interrupt request status$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+SUBSRCPND	mini2440.h	/^    __IO unsigned int 	SUBSRCPND;     \/\/Sub source pending$/;"	m	struct:__anon4490a7720708	typeref:typename:__IO unsigned int
+UART	mini2440.h	/^#define UART	/;"	d
+UART_BAND	uart.h	/^#define UART_BAND /;"	d
+UART_BASE	mini2440.h	/^#define UART_BASE	/;"	d
+UART_CLOCK	uart.h	/^#define UART_CLOCK /;"	d
+UART_TypeDef	mini2440.h	/^} UART_TypeDef;$/;"	t	typeref:struct:__anon4490a7720608
+UBRDIV0	mini2440.h	/^    __IO unsigned int UBRDIV0;          \/\/UART 0 baud rate divisor$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UCON0	mini2440.h	/^    __IO unsigned int UCON0;            \/\/UART 0 control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UERSTAT0	mini2440.h	/^    __IO unsigned int UERSTAT0;         \/\/UART 0 Rx error status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFCON0	mini2440.h	/^    __IO unsigned int UFCON0;           \/\/UART 0 FIFO control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UFSTAT0	mini2440.h	/^    __IO unsigned int UFSTAT0;          \/\/UART 0 FIFO status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+ULCON0	mini2440.h	/^    __IO unsigned int ULCON0;           \/\/UART 0 line control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UMCON0	mini2440.h	/^    __IO unsigned int UMCON0;           \/\/UART 0 modem control$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UMSTAT0	mini2440.h	/^    __IO unsigned int UMSTAT0;          \/\/UART 0 modem status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+URXH0	mini2440.h	/^    __IO unsigned int URXH0;            \/\/UART 0 receive buffer$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTRSTAT0	mini2440.h	/^    __IO unsigned int UTRSTAT0;         \/\/UART 0 Tx\/Rx status$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+UTXH0	mini2440.h	/^    __IO unsigned int UTXH0;            \/\/UART 0 transmission hold$/;"	m	struct:__anon4490a7720608	typeref:typename:__IO unsigned int
+WHOAMI	serial.h	/^    WHOAMI,$/;"	e	enum:__anon0d8f0a5b0103
+_LED_H_	led.h	/^#define _LED_H_$/;"	d
+_MINI2440_H	mini2440.h	/^#define _MINI2440_H$/;"	d
+_SERIAL_H	serial.h	/^#define _SERIAL_H$/;"	d
+_UART_H_	uart.h	/^#define _UART_H_$/;"	d
+__IO	mini2440.h	/^#define __IO	/;"	d
+__anon0d8f0a5b0103	serial.h	/^typedef enum {$/;"	g
+__anon4490a7720108	mini2440.h	/^typedef struct {$/;"	s
+__anon4490a7720208	mini2440.h	/^typedef struct {$/;"	s
+__anon4490a7720308	mini2440.h	/^typedef struct {$/;"	s
+__anon4490a7720408	mini2440.h	/^typedef struct {$/;"	s
+__anon4490a7720508	mini2440.h	/^typedef struct {$/;"	s
+__anon4490a7720608	mini2440.h	/^typedef struct {$/;"	s
+__anon4490a7720708	mini2440.h	/^typedef struct {$/;"	s
+_start	start.S	/^_start:$/;"	l
+boot_init	start.S	/^boot_init:$/;"	l
+bord_init_ok	led.c	/^void bord_init_ok(void)$/;"	f	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
+clock_init	start.S	/^clock_init:$/;"	l
+delay	led.c	/^void delay(unsigned int time)$/;"	f	typeref:typename:void
+disable_watch_dog	start.S	/^disable_watch_dog:$/;"	l
+do_irq	start.S	/^do_irq:$/;"	l
+getc	serial.c	/^static unsigned int getc(void)$/;"	f	typeref:typename:unsigned int	file:
+getstr	serial.c	/^void getstr(void)$/;"	f	typeref:typename:void
+int_return	start.S	/^int_return:$/;"	l
+led_init	led.c	/^void led_init(void)$/;"	f	typeref:typename:void
+led_twinkle	led.c	/^void led_twinkle(void)$/;"	f	typeref:typename:void
+loop	start.S	/^loop:$/;"	l
+main	main.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+parsing_cmd	serial.c	/^static void parsing_cmd(int cmd)$/;"	f	typeref:typename:void	file:
+putc	serial.c	/^static void putc(unsigned char data)$/;"	f	typeref:typename:void	file:
+puts	serial.c	/^static void puts(const char *s)$/;"	f	typeref:typename:void	file:
+shell_cmd_prompt	serial.c	/^static void shell_cmd_prompt(void)$/;"	f	typeref:typename:void	file:
+start.bin	Makefile	/^start.bin:start.S$/;"	t
+string_cmp	serial.c	/^static int string_cmp(char *buf)$/;"	f	typeref:typename:int	file:
+uart0_interrupt_init	uart.c	/^void uart0_interrupt_init(void)$/;"	f	typeref:typename:void
+uart_init	uart.c	/^void uart_init(void)$/;"	f	typeref:typename:void
+uart_test	uart.c	/^void uart_test(void)$/;"	f	typeref:typename:void
