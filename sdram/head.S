@@ -60,6 +60,7 @@ memsetup:
 
 .align 4								@4字节对齐
 
+
 mem_cfg_val:
 	@存储控制器13个寄存器的设置值
     .long   0x22011110					@ BWSCON
