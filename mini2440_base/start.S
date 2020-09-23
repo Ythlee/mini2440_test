@@ -31,10 +31,19 @@ date_abort:
 not_used:
 	b not_used
 irq:
-	b irq
+	ldr sp, =0x33d00000
+	/* 保存现场 */
+	/* 在irq异常处理函数中有可能会修改r0-r12, 所以先保存 */
+	/* lr-4是异常处理完后的返回地址, 也要保存 */
+	sub lr, lr, #4
+	stmdb sp!, {r0-r12, lr}  
+	/* 处理irq异常 */
+	bl handle_irq_c
+	/* 恢复现场 */
+	ldmia sp!, {r0-r12, pc}^  /* ^会把spsr_irq的值恢复到cpsr里 */
+
 fiq:
 	b fiq
-
 reset:
 	@;关闭看门狗
 	bl disable_watch_dog
