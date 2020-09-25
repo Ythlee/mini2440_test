@@ -1,4 +1,4 @@
-LIBPATH =-lgcc -L/usr/local/arm/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3
+LIBPATH =-lgcc -L /home/yangcan/.armtools/FriendlyARM/toolschain/4.4.3/lib/gcc/arm-none-linux-gnueabi/4.4.3/
 INCLUDE = ./inc
 
 all:start.o main.o led.o uart.o my_printf.o interrupt.o serial.o
