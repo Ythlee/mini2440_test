@@ -130,13 +130,13 @@
 
 #define     NFCONF                   __REG(0x4E000000)  //NAND flash configuration             
 #define     NFCONT                   __REG(0x4E000004)  //NAND flash control                   
-#define     NFCMD                    __REG(0x4E000008)  //NAND flash command                   
-#define     NFADDR                   __REG(0x4E00000C)  //NAND flash address                   
-#define     NFDATA                   __REG(0x4E000010)  //NAND flash data                      
+#define     NFCCMD                    __REG_BYTE(0x4E000008)  //NAND flash command                   
+#define     NFADDR                   __REG_BYTE(0x4E00000C)  //NAND flash address                   
+#define     NFDATA                   __REG_BYTE(0x4E000010)  //NAND flash data                      
 #define     NFMECC0                  __REG(0x4E000014)  //NAND flash main area ECC0/1          
 #define     NFMECC1                  __REG(0x4E000018)  //NAND flash main area ECC2/3          
 #define     NFSECC                   __REG(0x4E00001C)  //NAND flash spare area ECC            
-#define     NFSTAT                   __REG(0x4E000020)  //NAND flash operation status          
+#define     NFSTAT                   __REG_BYTE(0x4E000020)  //NAND flash operation status          
 #define     NFESTAT0                 __REG(0x4E000024)  //NAND flash ECC status for I/O[7:0]   
 #define     NFESTAT1                 __REG(0x4E000028)  //NAND flash ECC status for I/O[15:8]  
 #define     NFMECC0_STATUS           __REG(0x4E00002C)  //NAND flash main area ECC0 status     
