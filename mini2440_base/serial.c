@@ -57,12 +57,12 @@ static void parsing_cmd(int cmd)
 		case LED_ON:
 			put_s("\r\nled is turn on");
 			put_s("\r\n[yangcan@mini2440 ~ ] ");
-			// LED_ALLON;
+			LED_ALLON;
 			break;
 		case LED_OFF:
 			put_s("\r\nled is turn off");
 			put_s("\r\n[yangcan@mini2440 ~ ] ");
-			//LED_ALLOFF;
+			LED_ALLOFF;
 			break;
 		case NAND_ID:
 			put_s("\r\n");

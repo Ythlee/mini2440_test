@@ -62,9 +62,9 @@ void nand_chip_id(void)
 	printf("device  id  = 0x%x\n\r",buf[1]);
 	printf("3rd byte    = 0x%x\n\r",buf[2]);
 	printf("4th byte    = 0x%x\n\r",buf[3]);
+	printf("5th byte    = 0x%x\n\r",buf[4]);
 	printf("page  size  = %d kb\n\r",1  <<  (buf[3] & 0x03));
 	printf("block size  = %d kb\n\r",64 << ((buf[3] >> 4) & 0x03));
-	printf("5th byte    = 0x%x\n\r",buf[4]);
 
 }
 
