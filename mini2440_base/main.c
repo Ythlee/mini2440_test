@@ -7,9 +7,9 @@ int main(int argc, char *argv[])
 {
     int i = 0;
     led_init();
-	key_init();
+    key_init();
     uart0_init();
-	nand_init();
+    nand_init();
 
     while(1) {
         led_twink();

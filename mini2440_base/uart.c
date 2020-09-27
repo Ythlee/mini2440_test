@@ -59,4 +59,3 @@ int puts(const char *s)
         s++;
     }
 }
-

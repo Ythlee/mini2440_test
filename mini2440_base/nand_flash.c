@@ -6,65 +6,65 @@ void nand_init(void)
 #define  TACLS   0
 #define  TWRPH0  1
 #define  TWRPH1  0
-	/*设置NAND FLASH的时序*/
-	NFCONF = (TACLS<<12) | (TWRPH0<<8) | (TWRPH1<<4);
-	/*使能NAND FLASH控制器,初始化ECC，禁止片选*/
-	NFCONT = (1<<4) | (1<<1) | (1<<0);
+    /*设置NAND FLASH的时序*/
+    NFCONF = (TACLS << 12) | (TWRPH0 << 8) | (TWRPH1 << 4);
+    /*使能NAND FLASH控制器,初始化ECC，禁止片选*/
+    NFCONT = (1 << 4) | (1 << 1) | (1 << 0);
 }
 
 void nand_select(void)
 {
-	/*使能片选*/
-	NFCONT &=~(1<<1);
+    /*使能片选*/
+    NFCONT &= ~(1 << 1);
 }
 
 void nand_deselect(void)
 {
-	/*禁止片选*/
-	NFCONT |= (1<<1);
+    /*禁止片选*/
+    NFCONT |= (1 << 1);
 }
 
 void nand_cmd(unsigned char cmd)
 {
-	volatile int i;
-	NFCCMD = cmd;
-	for(i=0; i<10; i++);
+    volatile int i;
+    NFCCMD = cmd;
+    for(i = 0; i < 10; i++);
 }
 
 void nand_addr_byte(unsigned char addr)
 {
-	volatile int i;
-	NFADDR = addr;
-	for(i=0; i<10; i++);
+    volatile int i;
+    NFADDR = addr;
+    for(i = 0; i < 10; i++);
 }
 
 unsigned char nand_data(void)
 {
-	return	NFDATA;
+    return	NFDATA;
 }
 
 void nand_chip_id(void)
 {
-	unsigned char buf[5]={0};
+    unsigned char buf[5] = {0};
 
-	nand_select();
-	nand_cmd(0x90);
-	nand_addr_byte(0x00);
+    nand_select();
+    nand_cmd(0x90);
+    nand_addr_byte(0x00);
 
-	buf[0] = nand_data();
-	buf[1] = nand_data();
-	buf[2] = nand_data();
-	buf[3] = nand_data();
-	buf[4] = nand_data();
-	nand_deselect();
+    buf[0] = nand_data();
+    buf[1] = nand_data();
+    buf[2] = nand_data();
+    buf[3] = nand_data();
+    buf[4] = nand_data();
+    nand_deselect();
 
-	printf("maker   id  = 0x%x\n\r",buf[0]);
-	printf("device  id  = 0x%x\n\r",buf[1]);
-	printf("3rd byte    = 0x%x\n\r",buf[2]);
-	printf("4th byte    = 0x%x\n\r",buf[3]);
-	printf("5th byte    = 0x%x\n\r",buf[4]);
-	printf("page  size  = %d kb\n\r",1  <<  (buf[3] & 0x03));
-	printf("block size  = %d kb\n\r",64 << ((buf[3] >> 4) & 0x03));
+    printf("maker   id  = 0x%x\n\r", buf[0]);
+    printf("device  id  = 0x%x\n\r", buf[1]);
+    printf("3rd byte    = 0x%x\n\r", buf[2]);
+    printf("4th byte    = 0x%x\n\r", buf[3]);
+    printf("5th byte    = 0x%x\n\r", buf[4]);
+    printf("page  size  = %d kb\n\r", 1  <<  (buf[3] & 0x03));
+    printf("block size  = %d kb\n\r", 64 << ((buf[3] >> 4) & 0x03));
 
 }
 
@@ -123,6 +123,5 @@ void nand_chip_id(void)
 //
 void nand_flash_test(void)
 {
-	nand_chip_id();
+    nand_chip_id();
 }
-
