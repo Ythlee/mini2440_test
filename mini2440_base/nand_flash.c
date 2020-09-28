@@ -43,6 +43,11 @@ unsigned char nand_data(void)
     return	NFDATA;
 }
 
+void wait_ready(void)
+{
+    while (!(NFSTAT * 1));
+}
+
 void nand_chip_id(void)
 {
     unsigned char buf[5] = {0};
@@ -68,60 +73,91 @@ void nand_chip_id(void)
 
 }
 
-
-//void nand_flash_test(void)
-//{
-//	char c;
-//
-//	while (1)
-//	{
-//		/* 打印菜单, 供我们选择测试内容 */
-//		printf("[s] Scan nand flash\n\r");
-//		printf("[e] Erase nand flash\n\r");
-//		printf("[w] Write nand flash\n\r");
-//		printf("[r] Read nand flash\n\r");
-//		printf("[q] quit\n\r");
-//		printf("Enter selection: ");
-//
-//		c = getchar();
-//		printf("%c\n\r", c);
-//
-//		/* 测试内容:
-//		 * 1. 识别nand flash
-//		 * 2. 擦除nand flash某个扇区
-//		 * 3. 编写某个地址
-//		 * 4. 读某个地址
-//		 */
-//		switch (c)
-//		{
-//			case 'q':
-//			case 'Q':
-//				return;
-//				break;
-//
-//			case 's':
-//			case 'S':
-//				nand_chip_id();
-//				break;
-//
-//			case 'e':
-//			case 'E':
-//				break;
-//
-//			case 'w':
-//			case 'W':
-//				break;
-//
-//			case 'r':
-//			case 'R':
-//				break;
-//			default:
-//				break;
-//		}
-//	}
-//}
-//
-void nand_flash_test(void)
+void nand_read(unsigned int addr, unsigned char *buf, unsigned int len)
 {
-    nand_chip_id();
+    int i = 0;
+    int page = addr / 2048;
+    int col = addr & (2048 - 1);
+
+    nand_select();
+    while(i < len) {
+        /* send cmd 00h */
+        nand_cmd(0x00);
+
+        /* send addr */
+        /* col addr */
+        nand_addr_byte(col & 0xff);
+        nand_addr_byte((col >> 8) & 0xff);
+
+        /* row/page addr */
+        nand_addr_byte(page & 0xff);
+        nand_addr_byte((page >> 8) & 0xff);
+        nand_addr_byte((page >> 16) & 0xff);
+
+        /* send cmd 30h */
+        nand_cmd(0x30);
+
+        /* wait not busy */
+        wait_ready();
+
+        /* read data */
+        for(; (col < 2048) && (i < len); col++) {
+            buf[i++] = nand_data();
+        }
+        if(i == len)
+            break;
+
+        col  = 0;
+        page++;
+    }
+
+    nand_deselect();
 }
+
+
+void do_read_nand_flash(void)
+{
+    unsigned int addr;
+    volatile unsigned char *p;
+    int i, j;
+    unsigned char c;
+    unsigned char str[16];
+    unsigned char buf[64];
+
+    /* 获得地址 */
+    printf("Enter the address to read: ");
+    addr = getchar();
+
+    nand_read(addr, buf, 64);
+    p = (volatile unsigned char *)buf;
+
+    printf("Data : \n\r");
+    /* 长度固定为64 */
+    for (i = 0; i < 4; i++) {
+        /* 每行打印16个数据 */
+        for (j = 0; j < 16; j++) {
+            /* 先打印数值 */
+            c = *p++;
+            str[j] = c;
+            printf("%02x ", c);
+
+        }
+
+        printf("   ; ");
+
+        for (j = 0; j < 16; j++) {
+            /* 后打印字符 */
+            if (str[j] < 0x20 || str[j] > 0x7e)  /* 不可视字符 */
+                putchar('.');
+            else
+                putchar(str[j]);
+
+        }
+        printf("\n\r");
+
+    }
+
+}
+
+
+

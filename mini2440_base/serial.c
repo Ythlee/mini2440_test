@@ -66,9 +66,14 @@ static void parsing_cmd(int cmd)
             break;
         case NAND_ID:
             put_s("\r\n");
-            nand_flash_test();
+            nand_chip_id();
             put_s("\r\n[yangcan@mini2440 ~ ] ");
             break;
+		case NAND_READ:
+            put_s("\r\n");
+			do_read_nand_flash();
+            put_s("\r\n[yangcan@mini2440 ~ ] ");
+			break;
         default:
             printf("\r\nnot found this command : %s", shell_buf);
             put_s("\r\n[yangcan@mini2440 ~ ] ");
@@ -83,7 +88,7 @@ int string_cmp(void)
     unsigned int flag = 0;
     unsigned int count = 0;
     char temp[10];
-    char *cmd = ",ls,cmd,pwd,pri,whoami,led_on,led_off,nand-id,,";
+    char *cmd = ",ls,cmd,pwd,pri,whoami,led_on,led_off,nand-id,nand-read,,";
     for(i = 0; i < 128; i++) {
         if(shell_buf[0] == '\r') {
             return 0;

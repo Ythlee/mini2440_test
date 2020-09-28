@@ -2,7 +2,8 @@
 #ifndef _NAND_FLASH_H
 #define _NAND_FLASH_H
 
-extern void nand_init(void);
-extern void nand_flash_test(void);
+void nand_init(void);
 
+void nand_chip_id(void);
+void do_read_nand_flash(void);
 #endif /* _NAND_FLASH_H */
