@@ -257,7 +257,6 @@ void do_write_nand_flash(void)
 {
     unsigned int addr;
     unsigned char str[100];
-    unsigned char str1 = "yangcan";
     int i, j;
     unsigned int val;
 
@@ -265,8 +264,8 @@ void do_write_nand_flash(void)
     printf("Enter the address of sector to write: ");
     addr = get_uint();
 
-    //printf("Enter the string to write: ");
-    //gets(str);
+    printf("Enter the string to write: ");
+    gets(str);
 
     printf("writing ...\n\r");
     nand_write(addr, str, strlen(str) + 1);
