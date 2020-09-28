@@ -11,6 +11,11 @@ typedef enum {
     WHOAMI,
     LED_ON,
     LED_OFF,
+    NAND_ID,
+	NAND_READ,
+	NAND_ERASE,
+	NAND_WRITE
+
 } COMMERDER;
 
 

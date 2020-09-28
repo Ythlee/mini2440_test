@@ -1,5 +1,6 @@
 #include "mini2440.h"
 #include "my_printf.h"
+#include "string_utils.h"
 
 void nand_init(void)
 {
@@ -41,6 +42,11 @@ void nand_addr_byte(unsigned char addr)
 unsigned char nand_data(void)
 {
     return	NFDATA;
+}
+
+void nand_w_data(unsigned char val)
+{
+    NFDATA = val;
 }
 
 void wait_ready(void)
@@ -126,7 +132,7 @@ void do_read_nand_flash(void)
 
     /* 获得地址 */
     printf("Enter the address to read: ");
-    addr = getchar();
+    addr = get_uint();
 
     nand_read(addr, buf, 64);
     p = (volatile unsigned char *)buf;
@@ -139,7 +145,7 @@ void do_read_nand_flash(void)
             /* 先打印数值 */
             c = *p++;
             str[j] = c;
-            printf("%02x ", c);
+            printf("%c ", c);
 
         }
 
@@ -160,4 +166,109 @@ void do_read_nand_flash(void)
 }
 
 
+void nand_erase(unsigned int addr, unsigned int len)
+{
+    int page = addr / 2048;
 
+    if(addr & (0x1ffff)) {
+        printf("nand_erase err, addr is not block align\n\r");
+        return -1;
+    }
+
+    if(len & (0x1ffff)) {
+        printf("nand_erase err, addr is not block align\n\r");
+        return -1;
+    }
+    nand_select();
+    while(1) {
+        page = addr / 2048;
+        nand_cmd(0x60);
+
+        /* row/page addr */
+        nand_addr_byte(page & 0xff);
+        nand_addr_byte((page >> 8) & 0xff);
+        nand_addr_byte((page >> 16) & 0xff);
+
+        nand_cmd(0xd0);
+        wait_ready();
+        len -= (128 * 1024);
+        if(len == 0)
+            break;
+        addr += (128 * 1024);
+    }
+    nand_deselect();
+}
+
+
+void nand_write(unsigned int addr, unsigned char *buf, unsigned int len)
+{
+    int page = addr / 2048;
+    int col  = addr & (2048 - 1);
+    int i = 0;
+
+    nand_select();
+
+    while (1) {
+        nand_cmd(0x80);
+
+        /* 发出地址 */
+        /* col addr */
+        nand_addr_byte(col & 0xff);
+        nand_addr_byte((col >> 8) & 0xff);
+
+        /* row/page addr */
+        nand_addr_byte(page & 0xff);
+        nand_addr_byte((page >> 8) & 0xff);
+        nand_addr_byte((page >> 16) & 0xff);
+
+        /* 发出数据 */
+        for (; (col < 2048) && (i < len); ) {
+            nand_w_data(buf[i++]);
+
+        }
+        nand_cmd(0x10);
+        wait_ready();
+
+        if (i == len)
+            break;
+        else {
+            /* 开始下一个循环page */
+            col = 0;
+            page++;
+        }
+    }
+
+    nand_deselect();
+}
+
+void do_erase_nand_flash(void)
+{
+    unsigned int addr;
+
+    /* 获得地址 */
+    printf("Enter the address of sector to erase: ");
+    addr = get_uint();
+
+    printf("erasing ...\n\r");
+    nand_erase(addr, 128 * 1024);
+}
+
+void do_write_nand_flash(void)
+{
+    unsigned int addr;
+    unsigned char str[100];
+    unsigned char str1 = "yangcan";
+    int i, j;
+    unsigned int val;
+
+    /* 获得地址 */
+    printf("Enter the address of sector to write: ");
+    addr = get_uint();
+
+    //printf("Enter the string to write: ");
+    //gets(str);
+
+    printf("writing ...\n\r");
+    nand_write(addr, str, strlen(str) + 1);
+
+}

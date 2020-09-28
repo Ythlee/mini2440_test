@@ -6,4 +6,6 @@ void nand_init(void);
 
 void nand_chip_id(void);
 void do_read_nand_flash(void);
+void do_erase_nand_flash(void);
+void do_write_nand_flash(void);
 #endif /* _NAND_FLASH_H */
