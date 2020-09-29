@@ -2,11 +2,18 @@ OUTPUT_ARCH(arm)
 ENTRY(_start)
 	SECTIONS{
 		. = 0x30000000;
+		code_start = .;
+
 		. = ALIGN(4);
 		.text :
 		{
-			start.o(.text)
-				*(.text)
+			*(.text)
+		}
+
+		. = ALIGN(4);
+		.rodata :
+		{
+			*(.rodata)
 		}
 
 		. = ALIGN(4);

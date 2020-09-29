@@ -7,6 +7,7 @@ long simple_strtol(const char *cp,char **endp,unsigned int base);
 char *gets(char s[]);
 int get_int(void);
 unsigned int get_uint(void);
+int strlen(const char * s);
 
 
 #endif /* _STRING_UTILS_H */

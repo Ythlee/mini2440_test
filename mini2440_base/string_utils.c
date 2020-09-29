@@ -172,4 +172,3 @@ unsigned int get_uint(void)
     gets(str);
     return simple_strtoul(str, NULL, 0);
 }
-

@@ -145,7 +145,7 @@ void do_read_nand_flash(void)
             /* 先打印数值 */
             c = *p++;
             str[j] = c;
-            printf("%c ", c);
+            printf("%2x ", c);
 
         }
 
@@ -172,12 +172,10 @@ void nand_erase(unsigned int addr, unsigned int len)
 
     if(addr & (0x1ffff)) {
         printf("nand_erase err, addr is not block align\n\r");
-        return -1;
     }
 
     if(len & (0x1ffff)) {
         printf("nand_erase err, addr is not block align\n\r");
-        return -1;
     }
     nand_select();
     while(1) {

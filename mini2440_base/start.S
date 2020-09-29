@@ -21,7 +21,16 @@ _irq:					.word irq
 _fiq:					.word fiq
 
 undefine_instruction:
-	b undefine_instruction
+	ldr sp, =0x34000000
+	stmdb sp!, {r0-r12, lr}  
+		
+	/* 保存现场 */
+	/* 处理und异常 */
+	mrs r0, cpsr
+		
+	/* 恢复现场 */
+	ldmia sp!, {r0-r12, pc}^  /* ^会把spsr的值恢复到cpsr里 */
+
 software_interrupt:
 	b software_interrupt
 prefetch_abort:
@@ -53,6 +62,8 @@ reset:
 	bl disable_mmu_cache
 	@;初始化时钟
 	bl clock_init
+	@;启动方式
+	bl boot_nand_or_nor
 	@;初始化SDRAM
 	bl sdram_init
 	@;复制代码到SDRAM
@@ -106,6 +117,19 @@ clock_init:
 	ldr r1, =(92<<12)|(1<<4)|(1<<0)
 	str r1, [r0]
 	mov pc, lr
+
+
+boot_nand_or_nor:
+	mov r1, #0
+	ldr r0, [r1] /* 读出原来的值备份 */
+	str r1, [r1] /* 0->[0] */ 
+	ldr r2, [r1] /* r2=[0] */
+	cmp r1, r2   /* r1==r2? 如果相等表示是NAND启动 */
+	ldr sp, =0x40000000+4096 /* 先假设是nor启动 */
+	moveq sp, #4096  /* nand启动 */
+	streq r0, [r1]
+
+
 
 sdram_init:
 	ldr r0, =0x48000000
