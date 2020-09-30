@@ -1,6 +1,9 @@
 #include "mini2440.h"
 #include "my_printf.h"
 #include "serial.h"
+#include "timer.h"
+
+extern int TIMERCOUNTER;
 
 char shell_buf[512] = {0};
 static int i = 0;
@@ -70,6 +73,14 @@ void uart0_eint_irq(void)
     }
 }
 
+void timer0_handle(void)
+{
+    if(INTOFFSET == 10)
+        if(TIMERCOUNTER > 0)
+            TIMERCOUNTER--;
+    SRCPND = 1 << INTOFFSET;
+    INTPND = 1 << INTOFFSET;
+}
 
 
 
@@ -79,12 +90,14 @@ void handle_irq_c(void)
     int bit = INTOFFSET;
 
     /* 调用对应的处理函数 */
-    if (bit == 5) { /* eint8_23 */
+    if (bit == 5)  /* eint8_23 */
         key_eint_irq(); /* 处理中断, 清中断源EINTPEND */
-    }
-    if (bit == 28) {
+
+    if (bit == 28)
         uart0_eint_irq();
-    }
+
+    if(bit == 10)
+        timer0_handle();
 
     /* 清中断 : 从源头开始清 */
     SRCPND |= (1 << bit);
