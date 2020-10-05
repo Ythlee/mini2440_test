@@ -5,9 +5,9 @@ int TIMERCOUNTER = 0;
 
 void timer0_init(void)
 {
-    TCFG0 = 24;  //预分频为24+1
+    TCFG0 = 0;  //预分频为24+1
     TCFG1 = 0x0;
-    TCNTB0 = 1000;  //1ms触发一次中断
+    TCNTB0 = 25000;  //1ms触发一次中断
     TCON |= (1 << 1);
     TCON = 0x09;
 

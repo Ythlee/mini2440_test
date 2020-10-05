@@ -13,10 +13,10 @@ int main(int argc, char *argv[])
     nand_init();
 
     while(1) {
-		delay_ms(500);
 		LED_ALLON;
 		delay_ms(500);
 		LED_ALLOFF;
+		delay_ms(500);
     }
 
     return 0;
