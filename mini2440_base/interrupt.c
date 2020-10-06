@@ -5,6 +5,7 @@
 
 extern int TIMERCOUNTER;
 
+extern int TEMP_CPM;
 char shell_buf[512] = {0};
 static int i = 0;
 
@@ -82,6 +83,12 @@ void timer0_handle(void)
     INTPND = 1 << INTOFFSET;
 }
 
+void time2_pwm(void)
+{
+	//CMPB2 = TEMP_CPM--;
+	GPBDAT = ~(GPBDAT&(0x7<<6));
+}
+
 
 
 void handle_irq_c(void)
@@ -98,6 +105,9 @@ void handle_irq_c(void)
 
     if(bit == 10)
         timer0_handle();
+
+    if(bit == 12)
+        time2_pwm();
 
     /* 清中断 : 从源头开始清 */
     SRCPND |= (1 << bit);
